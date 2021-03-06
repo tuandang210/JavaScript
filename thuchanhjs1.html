@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thuchanh</title>
+</head>
+<body>
+    <h4>Bài 1</h4>
+    <button type="button" onclick="ShowMessage();">Click Me</button>
+    <script>
+        function ShowMessage() {
+            alert("Xin Chào!");
+        }
+    </script>
+
+    <h4>Bài 2</h4>
+    <p id="messageDiv"></p>
+    <button type="button" onclick="showMessage();">Click Me!</button>
+    <script>
+        function showMessage(){
+            document.getElementById('messageDiv').innerHTML = 'Xin chào!';
+        }
+    </script>
+
+    <h4>Bài 3</h4>
+    <button type="button" onclick="showMessage1();">Click Me!</button>
+    <script>
+        function showMessage1(){
+            document.write('Xin chào!');
+        }
+    </script>
+
+    <h4>Bài 4</h4>
+    <button type="button" onclick="showMessage2();">Click Me!</button>
+    <script>
+        function showMessage2(){
+            console.log('Xin chào!');
+        }
+    </script>
+</body>
+</html>
