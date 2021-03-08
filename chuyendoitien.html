@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>doitien</title>
+</head>
+<body>
+    <table>
+        <form>
+            <tr style="text-align: center">
+                <td><b>Amount</b></td>
+                <td><b>From Currency</b></td>
+                <td><b>To Currency</b></td>
+                <td></td>
+            </tr>
+            <tr style="text-align: center">
+                <td>
+                    <input id="amount" type="number" name="number" style="width: 100px"></td>
+                <td>
+                    <select id="select1" style="width: 80px">
+                        <option value="USD">USD</option>
+                        <option value="VND">VND</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="select2" style="width:80px">
+                        <option value="USD">USD</option>
+                        <option value="VND">VND</option>
+                    </select>
+                </td>
+                <td>
+                    <button type="button" onclick="showMessage()" value="showMessage" style="background-color: mediumpurple; color: white;">Convert</button>
+                </td>
+            </tr>
+            <tr>
+                <td id="result"></td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>
+        <script>
+            function showMessage() {
+                let amount = +document.getElementById('amount').value;
+                let currency1 = document.getElementById('select1').value;
+                let currency2 = document.getElementById('select2').value;
+                switch (currency1 + ' ' + currency2) {
+                    case "USD USD":
+                        var y = amount * 1;
+                        document.getElementById('result').innerHTML = "result = $ " +y.toFixed(2);
+                        break
+                    case "USD VND":
+                        var x= currency2 = 23000;
+                        var y= amount * x;
+                        document.getElementById('result').innerHTML= "result = đ " +y.toFixed(2);
+                        break
+                    case "VND VND":
+                        var y= amount*1;
+                        document.getElementById('result').innerHTML= "result = đ " +y.toFixed(2);
+                        break
+                    case "VND USD":
+                        var x= currency2 = 23000;
+                        var y = amount/x;
+                        document.getElementById('result').innerHTML= "result = $ " +y.toFixed(2);
+                        break
+                }}</script>
