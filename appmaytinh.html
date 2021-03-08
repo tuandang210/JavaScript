@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>appmaytinh</title>
+</head>
+<body>
+    <table>
+        <tr><h3>Calculator</h3></tr>
+        <tr>
+            <td colspan="2"><input type="number" id="num1" name="number1" style="width: 150px"></td>
+            <td colspan="2"><input type="number" id="num2" name="number2" style="width: 150px"></td>
+        </tr>
+        <tr>
+            <td><button id="addition" name="addition" onclick="addition()" value="addition">Addition(+)</button></td>
+            <td><button id="subtraction" name="subtraction" onclick="subtraction()" value="subtraction">Subtraction(-)</button></td>
+            <td><button id="multiplication" name="multiplication" onclick="multiplication()" value="multiplication">Multiplication(x)</button></td>
+            <td><button id="division" name="division" onclick="division()" value="division">Division(/)</button> </td>
+        </tr>
+        <tr><td id="result"></td></tr>
+    </table>
+</body>
+</html>
+    <script>
+
+        function addition() {
+            var number1 = +document.getElementById('num1').value;
+            var number2 = +document.getElementById('num2').value;
+            var x = number1 + number2;
+            document.getElementById('result').innerHTML = "= " + x.toFixed(2)
+        }
+        function subtraction() {
+            var number1 = +document.getElementById('num1').value;
+            var number2 = +document.getElementById('num2').value;
+            var x = number1 - number2;
+            document.getElementById('result').innerHTML = "= " + x.toFixed(2)
+        }
+        function multiplication() {
+            var number1 = +document.getElementById('num1').value;
+            var number2 = +document.getElementById('num2').value;
+            var x = number1 * number2;
+            document.getElementById('result').innerHTML = "= " + x.toFixed(2)
+        }
+        function division() {
+            var number1 = +document.getElementById('num1').value;
+            var number2 = +document.getElementById('num2').value;
+            var x = number1 / number2;
+            document.getElementById('result').innerHTML = "= " + x.toFixed(2)
+        }
+    </script>
