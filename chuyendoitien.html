@@ -41,26 +41,26 @@
 </html>
         <script>
             function showMessage() {
-                let amount = document.getElementById('amount').value;
+                let amount = +document.getElementById('amount').value;
                 let currency1 = document.getElementById('select1').value;
                 let currency2 = document.getElementById('select2').value;
                 switch (currency1 + ' ' + currency2) {
                     case "USD USD":
                         var y = amount * 1;
-                        document.getElementById('result').innerHTML = "result = $ " +parseFloat(Math.round(y * 100) / 100).toFixed(2);
+                        document.getElementById('result').innerHTML = "result = $ " +y.toFixed(2);
                         break
                     case "USD VND":
                         var x= currency2 = 23000;
                         var y= amount * x;
-                        document.getElementById('result').innerHTML= "result = đ " + parseFloat(Math.round(y * 100) / 100).toFixed(2);
+                        document.getElementById('result').innerHTML= "result = đ " +y.toFixed(2);
                         break
                     case "VND VND":
                         var y= amount*1;
-                        document.getElementById('result').innerHTML= "result = đ " + parseFloat(Math.round(y * 100) / 100).toFixed(2);
+                        document.getElementById('result').innerHTML= "result = đ " +y.toFixed(2);
                         break
                     case "VND USD":
                         var x= currency2 = 23000;
                         var y = amount/x;
-                        document.getElementById('result').innerHTML= "result = $ " + parseFloat(Math.round(y * 100) / 100).toFixed(2);
+                        document.getElementById('result').innerHTML= "result = $ " +y.toFixed(2);
                         break
                 }}</script>
