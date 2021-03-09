@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quabong</title>
+</head>
+<body>
+    <form>
+        <img id="image" src="clipart12257.png " style="width: 200px">
+        <p>Click button below to move the ball to right</p>
+        <input type="button" value="Click me" onclick="moveRight()"/>
+    </form>
+</body>
+</html>
+    <script>
+        let image1= null;
+        image1 = document.getElementById("image");
+        function init() {
+            image1 = document.getElementById("image");
+            image1.style.position = "relative";
+            image1.style.left = "0px";
+        }
+        function moveRight () {
+            image1.style.left = parseInt(image1.style.left) + 10 + "px";
+        }
+        window.onload = init()
+    </script>
