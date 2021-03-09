@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><input id="weight" type="number" style="width: 150px" placeholder="Nhập cân nặng "></td>
+        <td><input id="height" type="number" style="width: 150px" placeholder="Nhập chiều cao"></td>
+    </tr>
+    <tr>
+        <td>
+        <button onclick="showMessage()" type="button" value="CLick me">Click me</button>
+        </td>
+    </tr>
+    <tr>
+        <td id="result"></td>
+    </tr>
+</table>
+</body>
+</html>
+    <script>
+        function showMessage() {
+        let weight = +document.getElementById("weight").value;
+        let height = +document.getElementById("height").value;
+        let bmi = (weight/(height*height));
+        if (bmi<18.5) {
+            document.getElementById("result").innerHTML = "result = Underweight";
+        } else {
+            if (18.5 <= bmi < 25.0) {
+                document.getElementById("result").innerHTML = "result = Normal";
+            } else {
+                if (25 <= bmi < 30.0) {
+                    document.getElementById("result").innerHTML = "result = Overweight";
+                } else {
+                    document.getElementById("result").innerHTML = "result = Obese";
+                }
+            }
+        }}
+    </script>
