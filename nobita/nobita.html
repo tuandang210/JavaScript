@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nobita</title>
+</head>
+<body onload="docReady()">
+    <img id="nobita" src="Capture.PNG" style="position: absolute;left:0; top:0; width: 100px; height: 150px">
+</body>
+</html>
+    <script>
+        function upArrowPressed() {
+            var element = document.getElementById("nobita");
+            element.style.top = parseInt(element.style.top) - 10 + "px";
+        }
+        function downArrowPressed () {
+            var element = document.getElementById("nobita");
+            element.style.top = parseInt(element.style.top) + 10 + "px";
+        }
+        function leftArowPressed () {
+            var element = document.getElementById("nobita");
+            element.style.left = parseInt(element.style.left) - 10 + "px";
+        }
+        function rightArowPressed () {
+            var element = document.getElementById("nobita");
+            element.style.left = parseInt(element.style.left) + 10 + "px";
+        }
+        function moveSelection(evt) {
+            switch (evt.keyCode) {
+                case 37:
+                    leftArowPressed();
+                    break;
+                case 39:
+                    rightArowPressed();
+                    break;
+                case 38:
+                    upArrowPressed();
+                    break;
+                case 40:
+                    downArrowPressed();
+                    break;
+            }
+        }
+        function docReady() {
+            window.addEventListener('keydown', moveSelection);
+        }
+    </script>
