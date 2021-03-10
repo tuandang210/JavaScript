@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyentap</title>
+</head>
+<body>
+    <script>
+        //Bài 1
+        let a = +prompt("a =  ");
+        let b = +prompt("b =  ");
+        if ((a % b)===0) {
+            alert("a chia hết cho b")
+        } else {alert("a không chia hết cho b")}
+
+        //Bài 2
+        let age = +prompt("nhập số tuổi");
+        if (age<16) {
+            alert("Bạn chưa đủ tuổi")
+        } else {
+            alert("Bạn đã đủ tuổi")
+        }
+
+        //Bài 3
+        let songuyen = +prompt("Nhập số nguyên")
+        if (songuyen>0) {
+            alert("Số nguyên lớn hơn 0")
+        } else {if(songuyen === 0){
+            alert("Số nguyên bằng 0")
+        }else {
+            alert("Số nguyên nhỏ hơn 0")
+        }}
+
+        //Bài 4
+        let x = +prompt("Nhập x");
+        let y = +prompt("Nhập y");
+        let z = +prompt("Nhập z");
+        let max = x;
+        if ((max<y) && (z<y)) {
+            alert("Số lớn nhất là " +y );
+        } else {
+            if((max<z) && (y<z)) {
+                alert("Số lớn nhất là " +z );
+            } else {
+                alert("Số lớn nhất là " +x );
+            }
+        }
+
+        //Bài 5
+        let diemkiemtra = +prompt("Nhập điểm kiểm tra");
+        let diemgiuaki = +prompt("Nhập điểm thi giữa kì");
+        let diemcuoiki = +prompt("Nhập điểm thi cuối kì");
+        let tb = (diemcuoiki+diemgiuaki+diemkiemtra)/3;
+        if (tb>= 8) {
+            alert("Học sinh giỏi " +tb );
+        } else if (tb>=6.5) {
+            alert("Học sinh khá " +tb );
+        } else {
+            alert("Học sinh trung bình " +tb);
+        }
+
+        //Bài 6
+        let doanhthu = +prompt("Nhập doanh thu ");
+        let rose = (doanhthu*10)/100;
+        alert("Hoa hồng = " +rose);
+
+        //Bài 7
+        let phone = +prompt("Nhập số phút thoại");
+        let money = phone*1000;
+        alert("Số tiền là " +money);
+    </script>
+</body>
+</html>
